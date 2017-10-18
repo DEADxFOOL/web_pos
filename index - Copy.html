@@ -1,0 +1,405 @@
+<!doctype >
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- <link href='fonts/family=DenkOne-Regular.ttf' rel='stylesheet' type='text/css'> -->
+        
+        <link href="css/bootstrap.css" rel="stylesheet" />
+        <link href="css/normalize.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+        <link href="css/data_table/jquery.dataTables.css" rel="stylesheet" />
+
+        <script charset="utf-8" src="js/modernizr.js"></script>
+        <script charset="utf-8" src="js/jquery-1.10.2.min.js"></script>
+        
+        <script charset="utf-8" src="js/jquery.dataTables.js"></script>
+        
+        <script charset="utf-8" src="js/dataTables.fixedColumns.js"></script>
+        
+        <script charset="utf-8" src="js/respond.src.js"></script>
+        <script charset="utf-8" src="js/jquery.fittext.js"></script>
+        <script charset="utf-8" src="js/bootstrap.min.js"></script>
+        <script charset="utf-8" src="js/jquery.textfill.js"></script>
+         
+        
+        <script charset="utf-8" src="js/main.js"></script>
+        <script charset="utf-8" src="items/items.js"></script>
+        
+    </head>
+        
+    
+    
+    <body>
+        
+        <div id="outer_wrap">
+            <div id="inner_wrap">
+                
+                
+                <div class="container-fluid header">
+                    <div class="row">
+                        <div class="col-sm-8 autofit store_logo"><span id="logo_name">YOUR STORE LOGO/NAME HERE</span></div>
+                        <div id="sys_lock"  class="col-sm-2 autofit log_in bttn"><span>System Lock</span></div>
+                        <div id="log_out" class="col-sm-1 autofit log_in bttn"><span>Log Out</span></div>
+                        <div id="option"  class="col-sm-1 autofit log_in bttn"><span>Option</span></div>
+                    </div>
+                </div>
+                
+                <div id="keys" class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F1</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F2</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F3</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F4</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F5</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F6</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F7</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F8</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F9</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F10</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F11</span></div>
+                        <div class="col-sm-1 autofit fkeys bttn"><span>F12</span></div>
+                    </div>
+                </div>
+                
+                
+                <div id="body" class="container-fluid">
+                   
+                    <div class="row">
+                        <div id="items" class="col-sm-8 body_container">
+                            <!--
+                            <div id="item_header">
+                            </div>
+                            -->
+                            <div id="item_content">
+                                
+
+                            <table id="table_id">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Description</th>
+                                            <th>QTY</th>
+                                            <th>Price/QTY</th>
+                                            <th>Total</th>
+                                            <th>barcode</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                            </div>
+                         </div>
+                        <div id="numpad" class="col-sm-4 body_container">
+                            <div class="row barcode">
+                                <div class="col-sm-8 autofit" id="barcode_div" >
+                                    <input id="barcode_input" class="textbox" type="text" placeholder="Enter Barcode"/>
+                                </div>
+                                <div class="col-sm-4 autofit bttn" id="barcode_search">
+                                    <span class="glyphicon glyphicon-zoom-in"></span>
+                                    <span>&nbsp;Search</span>
+                                </div>
+                            </div>
+                            <div id="numbers">
+                                <div class="row">
+                                    <div class="col-sm-9 keypads">
+                                        <div class="sub_numbers">
+                                            <div class="row">
+                                                <div id="n7" class="col-sm-4 autofit number_keys bttn"><span>7</span></div>
+                                                <div id="n8" class="col-sm-4 autofit number_keys bttn"><span>8</span></div>
+                                                <div id="n9" class="col-sm-4 autofit number_keys bttn"><span>9</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub_numbers">
+                                            <div class="row">
+                                                <div id="n4" class="col-sm-4 autofit number_keys bttn"><span>4</span></div>
+                                                <div id="n5" class="col-sm-4 autofit number_keys bttn"><span>5</span></div>
+                                                <div id="n6" class="col-sm-4 autofit number_keys bttn"><span>6</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub_numbers">
+                                            <div class="row">
+                                                <div id="n1" class="col-sm-4 autofit number_keys bttn"><span>1</span></div>
+                                                <div id="n2" class="col-sm-4 autofit number_keys bttn"><span>2</span></div>
+                                                <div id="n3" class="col-sm-4 autofit number_keys bttn"><span>3</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="sub_numbers">
+                                            <div class="row">
+                                                <div id="n0" class="col-sm-8 autofit number_keys bttn"><span>0</span></div>
+                                                <div id="dot" class="col-sm-4 autofit number_keys bttn"><span>.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 keypads">
+                                        <div class="row sub_keys">
+                                            <div id="clr" class="col-sm-12 autofit number_keys bttn"><span>Clear</span></div>
+                                        </div>
+                                        <div class="row sub_keys">
+                                            <div id="enter" class="col-sm-12 autofit number_keys bttn"><span>Enter</span></div>
+                                        </div>
+
+                                    </div>                                     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="total" class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-2 sub_total">
+                            <div id="change_label" class="sub_tatol_half autofit sub_total_text">
+                                <span>Last Change: </span>
+                            </div>
+                            <div id="change" class="autofit sub_total_value">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 sub_total">
+                            <div id="items_label" class="sub_tatol_half autofit sub_total_text">
+                                <span>Total # of Items : </span>
+                            </div>
+                            <div id="items_qty" class="autofit sub_total_value">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 sub_total">
+                            <div id="qty_label" class="sub_tatol_half autofit sub_total_text">
+                                <span>Total # of Qty : </span>
+                            </div>
+                            <div id="qty" class="autofit sub_total_value">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div id="running_total" class="col-sm-6 sub_total">
+                            <div class="row">
+                                <div class="col-sm-4 total_box autofit"><span>Total:</span></div>
+                                <div id="php_total" class="col-sm-8 total_box autofit"><span>0.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="footer" class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4 sub_footer autofit">Powered by : Cifer Software</div>
+                        <div class="col-sm-4 sub_footer autofit">Cashier : Mr. Penz</div>
+                        <div class="col-sm-4 sub_footer autofit" id="date_time"></div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+        <div id="Item_description">
+            <div id="desc_close" class="autofit bttn">
+                <span class="glyphicon glyphicon-remove"></span>           
+            </div>
+            <div id="I_desc_wrap">
+                <div id="I_header" class="autofit">
+                    <span class="glyphicon glyphicon-ok-sign"></span><span> Item Found!</span>
+                </div>
+                <div id="I_description">
+                    <div class="desc_label autofit">
+                        <span>Description</span>
+                    </div>
+                    <div class="desc_input autofit">
+                        <span id="I_found_desc" class="textbox desc_input_text"></span>
+                    </div>
+                    
+                </div>
+                <div id="I_price">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>Price</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_price"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>Barcode</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_barcode"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="I_qty">
+                    <div class="row zero_marg">
+                            <div class="col-sm-3 zero_pad">
+                                <div id="I_qty_text">
+                                    <div id="I_Enter_t" class="autofit"><span>Enter</span></div>
+                                    <div id="I_Qty_t" class="autofit"><span>Qty</span></div>
+                                </div> 
+                            </div>
+                            <div class="col-sm-2 zero_pad" >
+                                <div id="I_qty_text_holder" class="textbox autofit">
+                                    <span id="I_qty_text_val">0</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 autofit zero_pad " id="I_qty_key_holder">
+                                <div class="autofit bttn" id="keyup">
+                                    <span class="glyphicon glyphicon-chevron-up"></span>
+                                </div>
+                                <div class="autofit bttn" id="keydown">
+                                    <span class="glyphicon glyphicon-chevron-down"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 autofit zero_pad" id="I_enter_key">
+                                <div id="I_confirm" class="bttn autofit">
+                                    <span>Enter</span>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                
+                <div id="I_wrong_item" class="autofit">
+                    <span class="glyphicon glyphicon-question-sign"></span> <span>Wrong Item? Press Esc Key or click</span> 
+                    <span id="desc_close_2" class="glyphicon glyphicon-remove"></span><span> at the top.</span>
+                </div>
+                <input maxlength='3' id="I_qty_text_val_hid" type="text"/>
+            </div>
+        </div>
+        
+        <div id="blocker">
+        </div>
+        
+        
+        
+        
+        
+        <div id="confirm_transaction">
+            <div id="desc_close_x" class="autofit bttn">
+                <span class="glyphicon glyphicon-remove"></span>           
+            </div>
+            
+            <div id="trnsc_wrap">
+                <div id="C_header" class="autofit">
+                    <span class="glyphicon glyphicon-ok-sign"></span><span> Cash out!</span>
+                </div>
+                
+                
+                <div class="C_type">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>Payment Type</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_price"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>Customer Acc #</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_barcode"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="C_type">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>First Name</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_price"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="desc_label autofit">
+                                <span>Last Name</span>
+                            </div>
+                            <div class="desc_input autofit">
+                                <span id="I_found_barcode"  class="textbox desc_input_text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="C_type">
+                    <div class="desc_label autofit">
+                        <span>Address</span>
+                    </div>
+                    <div class="desc_input autofit">
+                        <span id="I_found_desc" class="textbox desc_input_text"></span>
+                    </div>
+                </div>
+                
+                
+                <div class="C_type_b">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="label_2 autofit">
+                                <span >Amount Payable</span>
+                            </div>
+                            <div class="input_2 autofit">
+                                <span id="payable"  class="textbox desc_input_text payable_price"></span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="label_2 autofit">
+                                <span>Change</span>
+                            </div>
+                            <div class="input_2 autofit">
+                                <span id="C_change"  class="textbox desc_input_text payable_price">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="C_type_b">
+                    
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="label_2 autofit">
+                                <span>Enter Amount</span>
+                            </div>
+                            <div class="input_2 autofit">
+                                <!-- <span id="I_found_price"  class="textbox desc_input_text"></span>-->
+                                <input type="text" id="cashout_amount" class ="textbox desc_input_text payable_price"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" id="C_enter_key">
+                            <div id="C_confirm" class="bttn autofit">
+                                <span>Enter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div id="C_wrong_item" class="autofit">
+                    <span class="glyphicon glyphicon-question-sign"></span> <span>Abort? Press Esc Key or click</span> 
+                    <span id="desc_close_2" class="glyphicon glyphicon-remove"></span><span> at the top.</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+
+    </body>
+    
+</html>
+
+
